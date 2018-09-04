@@ -136,6 +136,7 @@ public class Payload {
 		payload.setSound("a");
 		payload.addParam("para1", "1231dfasfwer");
 		payload.addParam("number", 12312312312L);
+		payload.setMutableContent(1);
 		System.out.println(payload.toString());
 	}
 	public String getAlertBody() {
