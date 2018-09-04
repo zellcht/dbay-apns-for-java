@@ -34,6 +34,7 @@ public class Payload {
 	private Integer badge;
 	private String sound = "default.caf";
 	private Integer contentAvailable;
+	private Integer mutableContent;
 	
 	private String alertBody;
 	private String alertActionLocKey;
@@ -110,6 +111,10 @@ public class Payload {
 			apsObj.put("content-available", getContentAvailable().intValue());
 		}
 		
+		if (getMutableContent() != null) {
+			apsObj.put("mutable-content", getMutableContent().intValue());
+		}		
+		
 		object.put(APS, apsObj);
 		if (getParams() != null) {
 			for (Entry<String, Object> e : getParams().entrySet()) {
@@ -168,5 +173,11 @@ public class Payload {
 	}
 	public void setContentAvailable(Integer contentAvailable) {
 		this.contentAvailable = contentAvailable;
+	}
+	public Integer getMutableContent() {
+		return mutableContent;
+	}
+	public void setMutableContent(Integer mutableContent) {
+		this.mutableContent = mutableContent;
 	}
 }
