@@ -18,6 +18,17 @@
             <url>http://www.welove520.com</url>
         </developer>
     </developers>
+
+    <distributionManagement>
+        <repository>
+            <id>repo-jrj-releases</id>
+            <url>http://nexus.jrj.com.cn/nexus/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>repo-jrj-snapshots</id>
+            <url>http://nexus.jrj.com.cn/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
     
     <dependencies>
         <dependency>

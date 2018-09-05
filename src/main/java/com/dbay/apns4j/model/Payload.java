@@ -35,6 +35,7 @@ public class Payload {
 	private String sound = "default.caf";
 	private Integer contentAvailable;
 	private Integer mutableContent;
+	private String category;
 	
 	private String alertBody;
 	private String alertActionLocKey;
@@ -113,6 +114,10 @@ public class Payload {
 		
 		if (getMutableContent() != null) {
 			apsObj.put("mutable-content", getMutableContent().intValue());
+		}
+		
+		if (getCategory() != null) {
+			apsObj.put("category", getCategory());
 		}		
 		
 		object.put(APS, apsObj);
@@ -180,5 +185,11 @@ public class Payload {
 	}
 	public void setMutableContent(Integer mutableContent) {
 		this.mutableContent = mutableContent;
+	}
+	public String getCategory() {
+		return category;
+	}
+	public void setCategory(String category) {
+		this.category = category;
 	}
 }
